@@ -3,7 +3,6 @@ package com.edu.board.service;
 import java.util.List;
 
 import javax.annotation.Resource;
-import javax.transaction.Transactional;
 
 import org.springframework.stereotype.Service;
 

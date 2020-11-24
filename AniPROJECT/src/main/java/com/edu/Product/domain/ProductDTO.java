@@ -2,7 +2,7 @@ package com.edu.Product.domain;
 
 public class ProductDTO {
 	private int productno;
-	private String productmagefile;
+	private String productimagefile;
 	private String productname;
 	private int productprice;
 	private int productsalescnt;
@@ -13,11 +13,11 @@ public class ProductDTO {
 	public void setProductno(int productno) {
 		this.productno = productno;
 	}
-	public String getProductmagefile() {
-		return productmagefile;
+	public String getProductimagefile() {
+		return productimagefile;
 	}
-	public void setProductmagefile(String productmagefile) {
-		this.productmagefile = productmagefile;
+	public void setProductimagefile(String productimagefile) {
+		this.productimagefile = productimagefile;
 	}
 	public String getProductname() {
 		return productname;
@@ -40,7 +40,7 @@ public class ProductDTO {
 	
 	@Override
 	public String toString() {
-		return "ProductDTO [productno=" + productno + ", productmagefile=" + productmagefile + ", productname="
+		return "ProductDTO [productno=" + productno + ", productmagefile=" + productimagefile + ", productname="
 				+ productname + ", productprice=" + productprice + ", productsalescnt=" + productsalescnt + "]";
 	}
 	

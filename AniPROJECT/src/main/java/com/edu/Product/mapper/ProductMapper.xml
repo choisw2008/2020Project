@@ -3,52 +3,52 @@
 PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.edu.board.mapper.BoardMapper">
+<mapper namespace="com.edu.Product.mapper.ProductMapper">
 
-	<select id="boardCount" resultType="int">
+	<select id="productCount" resultType="int">
 	SELECT	COUNT(*)
-	FROM	boardtable
+	FROM	PRODUCTTABLE
 	</select>
 
-	<insert id="boardInsert" parameterType="com.edu.board.domain.BoardDTO" useGeneratedKeys="true" keyProperty="bno">
-	INSERT	INTO	boardtable
-			(BNO, 		SUBJECT, 	CONTENT, 	WRITER, 	REG_DATE)
-	VALUES	(#{bno},	#{subject},	#{content},	#{writer},	now() )
+	<insert id="productInsert" parameterType="com.edu.Product.domain.ProductDTO" useGeneratedKeys="true" keyProperty="productno">
+	INSERT	INTO	PRODUCTTABLE
+			(PRODUCTNO, PRODUCTIMAGEFILE, PRODUCTNAME, 	PRODUCTPRICE, PRODUCTSALESCNT)
+	VALUES	(#{productno},#{productimagefile},#{productname},#{productprice}, #{productsalescnt} )
 	</insert>
 
-	<insert id="fileInsert" parameterType="com.edu.board.domain.FileDTO">
+	<insert id="fileInsert" parameterType="com.edu.Product.domain.FileDTO">
 	INSERT	INTO	FILES
 			(FNO,		BNO,	FILENAME,		FILEORINAME,	FILEURL)
 	VALUES	(#{fno},	#{bno},	#{fileName},	#{fileOriName},	#{fileUrl})
 	</insert>
 
 	<!-- 게시글 목록 보기 -->
-	<select id="boardList" resultType="com.edu.board.domain.BoardDTO">
+	<select id="productList" resultType="com.edu.Product.domain.ProductDTO">
 	SELECT	
-		BNO, SUBJECT, CONTENT, WRITER, REG_DATE
+		PRODUCTNO, PRODUCTIMAGEFILE, PRODUCTNAME, PRODUCTPRICE, PRODUCTSALESCNT
 	FROM
-			boardtable	
-	order by REG_DATE desc		
+			PRODUCTTABLE	
+	order by PRODUCTNO desc		
 	LIMIT #{startList}, #{listSize}
 	</select>
 	
-	<select id="getBoardListCnt" resultType="int">
+	<select id="getproductListCnt" resultType="int">
 		SELECT
 			count(*) as listCut
 		FROM
-			boardtable
+			PRODUCTTABLE
 	</select>
 
 	<!-- 게시글 번호에 해당하는 자료를 추출한다. -->
-	<select id="boardDetail" parameterType="int" resultType="com.edu.board.domain.BoardDTO">
+	<select id="productDetail" parameterType="int" resultType="com.edu.Product.domain.ProductDTO">
 	SELECT	*
-	FROM	boardtable
+	FROM	PRODUCTTABLE
 	WHERE	BNO		= #{bno}
 	</select>
 	
 	<!-- bno에 해당하는 게시글의 정보를 수정한다. -->
-	<update id="boardUpdate" parameterType="com.edu.board.domain.BoardDTO">
-	UPDATE	boardtable
+	<update id="productUpdate" parameterType="com.edu.Product.domain.ProductDTO">
+	UPDATE	PRODUCTTABLE
 	SET		<if test="subject != null and subject !=''">SUBJECT = #{subject}</if>
 			<if test="subject != null and subject !='' and content != null and content !=''"> , </if>
 			<if test="content != null and content !=''">CONTENT = #{content}</if>
@@ -56,35 +56,16 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	</update>
 	
 	<!-- bno에 해당하는 자료를 삭제한다. -->
-	<delete id="boardDelete" parameterType="int" >
+	<delete id="productDelete" parameterType="int" >
 	DELETE
-	FROM	boardtable
+	FROM	PRODUCTTABLE
 	WHERE	BNO		= #{bno}
 	</delete>
-	
+	<!-- 
 	<select id="fileDetail" parameterType="int" resultType="com.edu.board.domain.FileDTO">
 	SELECT	*
 	FROM	FILES
 	WHERE	BNO		= #{bno}
 	</select>
+	-->
 </mapper>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

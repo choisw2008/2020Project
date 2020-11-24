@@ -35,52 +35,52 @@ div#paginationBox {
 
 	<div class="container">
 
-		<h2>판매 제품 목록</h2>
-
+		<h2>게시글 목록</h2>
+		
 		<button class="btn btn-primary" id="inserting"
-			onclick="location.href='/board/insert'">글쓰기</button>
+			onclick="location.href='/product/productinsert'">글쓰기</button>
 
 		<table class="table table-hover table-bordered">
 			<thead>
 				<tr>
 					<th>No</th>
-					<th>Subject</th>
-					<th>Content</th>
-					<th>Writer</th>
-					<th>Date</th>
+					<th>이미지</th>
+					<th>제품명</th>
+					<th>가격</th>
+					<th>판매수량</th>
 				</tr>
 			</thead>
-			<c:forEach var="board" items="${list}">
+			<c:forEach var="product" items="${list}">
 				<tr>
 					<td class="info"
-						onclick="location.href='/board/detail/${board.bno}'">${board.bno}</td>
-					<td>${board.subject}</td>
-					<td>${board.content}</td>
-					<td>${board.writer}</td>
-					<td><fmt:formatDate value="${board.reg_date}"
-							pattern="yyyy년 MM월 dd일 HH시 mm분 ss초" /></td>
+						onclick="location.href='/board/detail/${product.productno}'">${product.productno}</td>
+					<td>${product.productimagefile}</td>
+					<td>${product.productname}</td>
+					<td>${product.productprice}</td>
+					<td>${product.productsalescnt}</td>
+					<td class="warning" onclick="location.href='/board/detailComment/${product.productno}'">댓글</td>
 				</tr>
 			</c:forEach>
 		</table>
-		
+
 
 
 		<!-- pagination{s} -->
 		<div id="paginationBox">
 			<ul class="pagination">
-				<c:if test="${pagination.prev}">
+				<c:if test="${productpagination.prev}">
 
 					<li class="page-item"><a class="page-link" href="#"
-						onClick="fn_prev('${pagination.page}', '${pagination.range}', '${pagination.rangeSize}')">Previous</a></li>
+						onClick="fn_prev('${productpagination.page}', '${productpagination.range}', '${productpagination.rangeSize}')">Previous</a></li>
 
 				</c:if>
-				<c:forEach begin="${pagination.startPage}"
+				<c:forEach begin="${productpagination.startPage}"
 					end="${pagination.endPage}" var="idx">
 
 					<li
-						class="page-item <c:out value="${pagination.page == idx ? 'active' : ''}"/> "><a
+						class="page-item <c:out value="${productpagination.page == idx ? 'active' : ''}"/> "><a
 						class="page-link" href="#"
-						onClick="fn_pagination('${idx}', '${pagination.range}', '${pagination.rangeSize}')">
+						onClick="fn_pagination('${idx}', '${productpagination.range}', '${productpagination.rangeSize}')">
 							${idx} </a></li>
 
 				</c:forEach>
@@ -88,7 +88,7 @@ div#paginationBox {
 				<c:if test="${pagination.next}">
 
 					<li class="page-item"><a class="page-link" href="#"
-						onClick="fn_next('${pagination.range}','${pagination.range}', '${pagination.rangeSize}')">Next</a></li>
+						onClick="fn_next('${productpagination.range}','${productpagination.range}', '${productpagination.rangeSize}')">Next</a></li>
 
 				</c:if>
 
@@ -105,7 +105,7 @@ div#paginationBox {
 
 			var range = range - 1;
 
-			var url = "${pageContext.request.contextPath}/board/list";
+			var url = "${pageContext.request.contextPath}/product/productlist";
 
 			url = url + "?page=" + page;
 
@@ -119,7 +119,7 @@ div#paginationBox {
 
 		function fn_pagination(page, range, rangeSize, searchType, keyword) {
 
-			var url = "${pageContext.request.contextPath}/board/list";
+			var url = "${pageContext.request.contextPath}/product/productlist";
 
 			url = url + "?page=" + page;
 
@@ -137,7 +137,7 @@ div#paginationBox {
 
 			var range = parseInt(range) + 1;
 
-			var url = "${pageContext.request.contextPath}/board/list";
+			var url = "${pageContext.request.contextPath}/product/productlist";
 
 			url = url + "?page=" + page;
 

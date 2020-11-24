@@ -6,8 +6,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-@MapperScan(value= {"com.edu.board.mapper", "com.edu.member.mapper"})
-@ComponentScan(basePackages= {"webSocket", "com.edu"})
+@MapperScan(value= {"com.edu.board.mapper", "com.edu.member.mapper","com.edu.Product.mapper"})
+@ComponentScan(basePackages= {"webSocket", "com.edu","com.edu.Product"})
 public class MyHomeSbApplication {
 
 	public static void main(String[] args) {

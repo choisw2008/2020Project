@@ -1,6 +1,6 @@
-package com.edu.board.domain;
+package com.edu.Product.domain;
 
-public class Pagination {
+public class productPagination {
 	private int listSize = 10; // 초기값으로 목록개수를 10으로 셋팅
 
 	private int rangeSize = 10; // 초기값으로 페이지범위를 10으로 셋팅

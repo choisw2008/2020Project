@@ -20,8 +20,8 @@
 		 margin-left: 37%;
 		}
 		#seting2{
-		margin-left: 37%;
-		margin-top: 10%;
+		margin-left: 32%;
+		margin-top: 9.8%;
 		}
 	</style>
 </head>
@@ -68,9 +68,10 @@
 				<h1>${member.userid}님 환영합니다.</h1>
 			</div>
 			<div id="seting2">
-				<button id="memberUpdateBtn" type="button">회원정보수정</button>&nbsp;&nbsp;&nbsp;
-				<button id="memberDeleteBtn" type="button">회원탈퇴</button>&nbsp;&nbsp;&nbsp;
-				<button id="logoutBtn" type="button">로그아웃</button>
+				<button id="memberUpdateBtn" type="button" class="btn btn-warning">회원정보수정</button>&nbsp;&nbsp;&nbsp;
+				<button id="memberDeleteBtn" type="button" class="btn btn-warning">회원탈퇴</button>&nbsp;&nbsp;&nbsp;
+				<button id="logoutBtn" type="button" class="btn btn-warning">로그아웃</button>&nbsp;&nbsp;&nbsp;
+				<button id="productBtn" type="button" class="btn btn-warning" onclick="location.href='/product/productlist'">제품등록</button>
 			</div>
 			
 		</c:if>
