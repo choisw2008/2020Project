@@ -30,8 +30,8 @@ public class ProductService {
 		return productMapper.productInsert(product);
 	}
 	//파일 올리기
-	public int fileInsertService(FileDTO file) throws Exception {
-		return productMapper.fileInsert(file);
+	public int fileInsertService(ProductDTO product) throws Exception {
+		return productMapper.fileInsert(product);
 	}
 	
 	public FileDTO fileDetailService(int Productno) throws Exception {

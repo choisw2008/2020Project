@@ -384,8 +384,8 @@ function pop() {
 					</p>
 					<p>닉네임:SyaByMe</p>
 					<p>다양한 가면등을 제작하고 판매하고있습니다</p>
-					<button class="btn" data-toggle="modal" data-target="#myModal">Buy
-						Click</button>
+					<p>Email: </p>
+					<button class="btn" data-toggle="modal" data-target="#myModal">Inquire</button>
 				</div>
 			</div>
 			<div class="col-sm-4">
@@ -397,8 +397,8 @@ function pop() {
 					</p>
 					<p>닉네임:오라하르콘</p>
 					<p>애니피규어를 주종목으로 하고있습니다.</p>
-					<button class="btn" data-toggle="modal" data-target="#myModal">Buy
-						Click</button>
+					<p>Email: </p>
+					<button class="btn" data-toggle="modal" data-target="#myModal">Inquire</button>
 				</div>
 			</div>
 			<div class="col-sm-4">
@@ -410,8 +410,8 @@ function pop() {
 					</p>
 					<p>닉네임:내 귀에 유미 시발련아</p>
 					<p>동물 피규어 및 애니피규어를 제작판매 하는 중 입니다.</p>
-					<button class="btn" data-toggle="modal" data-target="#myModal">Buy
-						Click</button>
+					<p>Email: </p>
+					<button class="btn" data-toggle="modal" data-target="#myModal">Inquire</button>
 				</div>
 			</div>
 		</div>
@@ -421,31 +421,36 @@ function pop() {
 	<div class="modal fade" id="myModal" role="dialog">
 		<div class="modal-dialog">
 
-
+		
 			<!-- Modal 팝업창 세부 내용-->
 			<div class="modal-content">
 				<div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal">×</button>
 					<h4>
-						<span class="glyphicon glyphicon-lock"></span> BUYS
+						<span class="glyphicon glyphicon-lock"></span> 문의하기
 					</h4>
 				</div>
 				<div class="modal-body">
-					<form role="form">
+					<form class="gform" method="post" action="https://script.google.com/macros/s/AKfycbyshtRVgEgf8FHEx_D9kYP2XmDGxIwib6dxI0tE5A/exec" name="contactus">
 						<div class="form-group">
-							<label for="psw"><span
-								class="glyphicon glyphicon-shopping-cart"></span> 원하시는 작품을 검색하세요</label>
-							<input type="number" class="form-control" id="psw"
-								placeholder="Search list?">
+							<label for="name"><span
+								class="glyphicon glyphicon-shopping-cart"></span> 이름</label>
+							<input type="text" class="form-control" id="name" name="name" required placeholder="이름을 입력하여 주세요"/>
 						</div>
 						<div class="form-group">
-							<label for="usrname"><span
-								class="glyphicon glyphicon-user"></span> 연락처를 남겨주세요</label> <input
-								type="text" class="form-control" id="usrname"
-								placeholder="Enter email">
+							<label for="email"><span
+								class="glyphicon glyphicon-user"></span>답변 받을 이메일</label> 
+							<input type="email" class="form-control" id="email" name="email" required placeholder="sample@mail.com"/>
+						</div>
+						<div class="form-group">
+							<label for="message"><span
+								class="glyphicon glyphicon-user"></span>문의 내용<sup>*</sup></label>
+							<span class="textbox">
+				               <textarea class="form-control" id="message" name="message" placeholder="궁금한 사항을 작성해 주세요" required></textarea>
+				            </span>
 						</div>
 						<button type="submit" class="btn btn-block">
-							Play <span class="glyphicon glyphicon-ok"></span>
+							Send <span class="glyphicon glyphicon-ok"></span>
 						</button>
 					</form>
 				</div>
@@ -458,7 +463,7 @@ function pop() {
 						Need <a href="#">help?</a>
 					</p>
 				</div>
-			</div>
+			</div>					
 		</div>
 	</div>
 
@@ -495,7 +500,6 @@ function pop() {
 							});
 				})
 	</script>
-
 </body>
 	</html>
 </layoutTag:layout>

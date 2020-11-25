@@ -10,6 +10,9 @@ import com.edu.board.domain.Pagination;
 
 @Repository("com.edu.Product.mapper.ProductMapper")
 public interface ProductMapper {
+	
+	//게시글의 개수
+	public int productCount() throws Exception;
 
 	public int getproductListCnt() throws Exception;
 	
@@ -20,7 +23,7 @@ public interface ProductMapper {
 	public int productInsert(ProductDTO product) throws Exception;
 	
 	//파일올리기
-	public int fileInsert(FileDTO file) throws Exception;
+	public int fileInsert(ProductDTO product) throws Exception;
 		
 	//파일 상세 정보
 	public FileDTO fileDetail(int Productno) throws Exception;

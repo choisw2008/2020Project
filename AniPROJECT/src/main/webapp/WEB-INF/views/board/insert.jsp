@@ -33,9 +33,6 @@
 				<textarea rows="4" cols="100" class="form-control" id="content"
 					name="content" placeholder="게시글을 작성하십시오."></textarea>
 			</div>
-			<div class="form-group">
-				<label for="File">첨부파일 1</label> <input type="file" name="file[0]">
-			</div>
 			
 			<!-- 비로그인 접속 제한 설정 -->
 			<input type="file" name="files">

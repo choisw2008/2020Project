@@ -18,7 +18,6 @@ import org.springframework.web.multipart.MultipartFile;
 
 import com.edu.Product.domain.ProductDTO;
 import com.edu.Product.service.ProductService;
-import com.edu.board.domain.FileDTO;
 import com.edu.board.domain.Pagination;
 
 @Controller
@@ -60,28 +59,25 @@ public class ProductController {
 
 			// 게시글 등록 화면에서 입력한 값들을 실어나르기 위해 BoardVO를 생성한다.
 			ProductDTO product = new ProductDTO();
-			FileDTO file = new FileDTO();
 			
 			product.setProductname(request.getParameter("productname"));
-			product.setProductimagefile(request.getParameter("Productimagefile"));
-			
 			
 			if (files.isEmpty()) { // 업로드할 파일이 없는 경우
 				productService.productInsertService(product); // 게시글만 올린다.
 			} else { // 업로드할 파일이 있는 경우
 				// FilenameUtils : commons-io defendency를 사용.
-				String fileName = files.getOriginalFilename();
-				String fileNameExtension = FilenameUtils.getExtension(fileName).toLowerCase();
+				String ProductimageOriName = files.getOriginalFilename();
+				String fileNameExtension = FilenameUtils.getExtension(ProductimageOriName).toLowerCase();
 				File destinationFile;
 				String destinationFileName;
 				// fileUrl = "uploadFiles 폴더의 위치";
 				// uploadFiles 폴더의 위치 확인 : uploadFiles 우클릭 -> Properties -> Resource - >
 				// Location
-				String fileUrl = "C:/workspaceSP/sboard/src/main/webapp/WEB-INF/uploadFiles/";
-
+				String productimageUrl = "C:/workspaceSP/sboard/src/main/webapp/WEB-INF/uploadFiles/";
+				
 				do {
 					destinationFileName = RandomStringUtils.randomAlphanumeric(32) + "." + fileNameExtension;
-					destinationFile = new File(fileUrl + destinationFileName);
+					destinationFile = new File(productimageUrl + destinationFileName);
 				} while (destinationFile.exists());
 
 				// MultipartFile.transferTo() : 요청 시점의 임시 파일을 로컬 파일 시스템에 영구적으로 복사해준다.
@@ -91,12 +87,12 @@ public class ProductController {
 				productService.productInsertService(product); // 게시글 올리기
 
 				// 파일관련 자료를 Files 테이블에 등록한다.
-				file.setBno(product.getProductno());
-				file.setFileName(destinationFileName);
-				file.setFileOriName(fileName);
-				file.setFileUrl(fileUrl);
-
-				productService.fileInsertService(file);
+				product.setProductno(product.getProductno());
+				product.setProductimageName(destinationFileName);
+				product.setProductimageOriName(ProductimageOriName);
+				product.setProductimageUrl(productimageUrl);
+				
+				productService.productInsertService(product);
 			}
 
 			return "redirect:/product/productlist";

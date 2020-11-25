@@ -9,6 +9,11 @@
 <head>
 	<meta charset="UTF-8">
 	<title>게시글 작성</title>
+	<style>
+		.container{
+			margin-top: 5%;
+		}
+	</style>
 </head>
 <body>
 
@@ -16,6 +21,10 @@
 	<h2>게시글 작성</h2>
 	<form class="form-horizontal" action="/product/insertProc" method="post" enctype="multipart/form-data">
 		
+		<div class="form-group">
+			<label for="productimagefile">이미지</label>
+			<input type="file" id="productimagefile" name="files">
+		</div>
 		<div class="form-group">
 			<label for="productname">제 품 명</label>
 			<input type="text" class="form-control" id="productname" name="productname" placeholder="제품명을 입력하십시오."/>
@@ -26,15 +35,11 @@
 		</div>
 		<div class="form-group">
 			<label for="productsalescnt">판매수량</label>
-			<textarea rows="4" cols="100" class="form-control" id="productsalescnt" name="productsalescnt" placeholder="게시글을 작성하십시오."></textarea>
+			<input type="text" class="form-control" id="productsalescnt" name="productsalescnt" placeholder="수량를 입력하십시오."/>
 		</div>
-		<div class="form-group">
-			<label for="productimagefile">이미지</label>
-			<input type="file" name="files" id="productimagefile" name="productimagefile">
-		</div>
+		
 		<!-- 비로그인 접속 제한 설정 -->
-		<input type="file" name="files" >
-		<c:if test = "${member != null}">
+		<c:if test="${member != null}">
 			<button id="inserting" type="submit" class="btn btn-primary">작성</button>
 		</c:if>
 	</form>
