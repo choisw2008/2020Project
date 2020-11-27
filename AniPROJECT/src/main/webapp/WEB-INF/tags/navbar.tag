@@ -1,4 +1,7 @@
 <%@ tag language="java" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c"   		uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fmt" 		uri="http://java.sun.com/jsp/jstl/fmt"%>
+<%@ taglib prefix="layoutTag" 	tagdir="/WEB-INF/tags" %>
 
 <nav class="navbar navbar-default navbar-fixed-top">
 	<div class="container-fluid">
@@ -17,8 +20,14 @@
 				<li class="dropdown"><a class="dropdown-toggle"
 					data-toggle="dropdown" href="#">회원관리<span class="caret"></span></a>
 					<ul class="dropdown-menu">
-						<li><a class="glyphicon glyphicon-log-in" href="${path}/member/login">로그인</a></li>
-						<li><a class="glyphicon glyphicon-log-out" href="${path}/member/logout">로그아웃</a></li>
+						 <c:if test="${member == null}">
+					      <li><a href="/member/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+					     </c:if>
+					     <c:if test="${member != null}">
+					      <li><a href="/member/logout" role="button"><span class="glyphicon glyphicon-log-out"></span>로그아웃</a></li>
+					     <li><a href="/member/memberUpdate" role="button"><span class="glyphicon glyphicon-log-out"></span>회원정보수정</a></li>
+					     <li><a href="/product/productinsert" role="button"><span class="glyphicon glyphicon-log-out"></span>제품등록</a></li>
+					     </c:if>
 					</ul>
 				</li>
 				
@@ -27,7 +36,7 @@
 										href="#">MORE <span class="caret"></span></a>
 					<ul class="dropdown-menu">
 						<li><a class="glyphicon glyphicon-queen" href="./../wonsu/more01.html">중고용품</a></li>
-						<li><a class="glyphicon glyphicon-grain" href="./../wonsu/more02.html">수제작</a></li>
+						<li><a class="glyphicon glyphicon-grain" href="/product/productlist">수제작</a></li>
 						<li><a class="glyphicon glyphicon-list" href="/board/list">게시판</a></li>
 						<li><a class="glyphicon glyphicon-phone" href="/chat">소통방</a></li>
 					</ul>

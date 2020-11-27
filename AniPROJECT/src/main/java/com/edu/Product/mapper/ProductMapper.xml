@@ -29,7 +29,6 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	FROM
 			PRODUCTTABLE	
 	order by PRODUCTNO desc		
-	LIMIT #{startList}, #{listSize}
 	</select>
 	
 	<select id="getproductListCnt" resultType="int">
@@ -43,7 +42,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	<select id="productDetail" parameterType="int" resultType="com.edu.Product.domain.ProductDTO">
 	SELECT	*
 	FROM	PRODUCTTABLE
-	WHERE	BNO		= #{bno}
+	WHERE	PRODUCTNO		= #{productno}
 	</select>
 	
 	<!-- bno에 해당하는 게시글의 정보를 수정한다. -->

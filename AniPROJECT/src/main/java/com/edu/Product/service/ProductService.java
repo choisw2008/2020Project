@@ -22,10 +22,10 @@ public class ProductService {
 		return productMapper.getproductListCnt();
 	}
 	//게시글 목록 보기
-		public List<ProductDTO> productListService(Pagination pagination) throws Exception {
-			return productMapper.productList(pagination);
-		}
-		//게시글 등록
+	public List<ProductDTO> productListService(Pagination pagination) throws Exception {
+		return productMapper.productList(pagination);
+	}
+	//게시글 등록
 	public int productInsertService(ProductDTO product) throws Exception {
 		return productMapper.productInsert(product);
 	}
@@ -34,8 +34,12 @@ public class ProductService {
 		return productMapper.fileInsert(product);
 	}
 	
-	public FileDTO fileDetailService(int Productno) throws Exception {
-		return productMapper.fileDetail(Productno);
+	public ProductDTO fileDetailService(int productno) throws Exception {
+		return productMapper.fileDetail(productno);
+	}
+	//게시글 상세보기
+	public ProductDTO productDetailService(int productno) throws Exception {
+		return productMapper.productDetail(productno);
 	}
 	
 //	// 서비스는 매퍼를 호출한다.

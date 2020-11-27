@@ -76,6 +76,7 @@
 					<input type="text" id="sample6_detailAddress" name="address" placeholder="상세주소">
 					<input type="text" id="sample6_extraAddress" name="address" placeholder="참고항목">
 			</div>
+			
 			<div class="form-group">
 				<label class="control-label col-sm-2">성 별</label>
 				<div class="col-sm-2">

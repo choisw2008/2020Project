@@ -50,7 +50,6 @@ a {
 	height: 50px;
 }
 </style>
-
 <!-- Container (Contact Section) -->
 <div id="contact" class="container">
 	<br>
@@ -59,7 +58,6 @@ a {
 		<li><a data-toggle="tab" href="#menu1">Chandler</a></li>
 		<li><a data-toggle="tab" href="#menu2">Peter</a></li>
 	</ul>
-
 	<!-- 하단 탭창 메뉴창 -->
 	<div class="tab-content">
 		<div id="home" class="tab-pane fade in active">
