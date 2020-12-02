@@ -8,7 +8,6 @@ public class ProductDTO {
 	private		String		productimageOriName;	// 원래 파일명
 	private		String		productimageUrl;		// 파일의 위치
 
-	
 	private 	String 		productname;
 	private 	int			productprice;
 	private 	int 		productsalescnt;
