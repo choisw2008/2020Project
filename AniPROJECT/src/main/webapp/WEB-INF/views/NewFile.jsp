@@ -29,16 +29,16 @@ body {
   margin: 0;
 }
 header { 
-  background:url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/mountain-range.jpg") no-repeat;
+  background:url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/mountain-range.jpg") no-repeat ;
   padding-top: 61.93333333%;
   background-size: cover;
-  font-family: 'Sucrose Bold Two';
+  font-family: "PT Sans" sans-serif;
 }
 header img {
   position: absolute;
   top: 0;
   right: 0;
-  width: 45.8%;
+  width: 45.8%; 
 }
 header h1 { 
   position: fixed;
@@ -78,7 +78,7 @@ main h2{
   background-color: #3091ff;
   position: relative;
   animation-name: example;
-  border-radius:110px;
+  border-radius:60px;
   animation-duration: 4s;
   margin-left: 40%;
 }
@@ -102,11 +102,98 @@ footer{
 footer p{
 	color: #fff;
 }
+/*메뉴 바*/
+article.accordion
+{
+    display: block;
+    width: 100%;
+    margin-left:1%;
+    background-color: #666;
+    overflow: auto;
+    border-radius: 5px;
+    box-shadow: 0 3px 3px rgba(0,0,0,0.3);
+    
+}
+article.accordion section
+{
+    position: relative;
+    display: block;
+    float: left;
+    width: 2em;
+    height: 12em;
+    margin: 0.5em 0 0.5em 0.5em;
+    color: #333;
+    background-color: #333;
+    overflow: hidden;
+    border-radius: 3px;
+}
+article.accordion section h2
+{
+    position: absolute;
+    font-size: 1em;
+    font-weight: bold;
+    text-align: center;
+    width: 12em;
+    height: 2em;
+    top: 12em;
+    left: 0;
+    text-indent: 1em;
+    padding: 0;
+    margin: 0;
+    color: #ddd;
+    -webkit-transform-origin: 0 0;
+    -moz-transform-origin: 0 0;
+    -ms-transform-origin: 0 0;
+    -o-transform-origin: 0 0;
+    transform-origin: 0 0;
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+}
+article.accordion section h2 a
+{
+    display: block;
+    width: 100%;
+    line-height: 2em;
+    text-decoration: none;
+    color: inherit;
+    outline: 0 none;
+}
+article.accordion section:target
+{
+    width: 86em;
+    padding: 0 1em;
+    color: #333;
+    background-color: #fff;
+}
+article.accordion section:target h2
+{
+    position: static;
+    font-size: 1.3em;
+    text-indent: 0;
+    color: #333;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+}
+
+article.accordion section,
+article.accordion section h2
+{
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
+}
 </style>
 </head>
 <header>
-  
-  <h1>웹 개발 <span><br>포 트</span><br> 폴리오</h1>
+  <h1>웹 개발 <span><br>포 트</span><br> 폴리오</h1>\
   <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/mountain-range-front.png">
 </header>
 <body>
@@ -115,11 +202,34 @@ footer p{
 	<p>저는 코딩을 이용한 웹개발과 디자인을 좋아합니다. 그리고 제가 하는일에 책임감과 애정을 느끼고 있습니다.</p><br><br>
 	
 	<div class="prop">
-		<img class="rounded-circle" src="/static/images/프로필3.jpg" alt="프로필" width="300px;">
-	</div><br><br>
+		<img class="Cinque Terre" src="" alt="프로필" width="300px;">
+	</div><br><br><br><br>
 	
-	<div class="prop2">
-		<img alt="간단한 소개" src="/static/images/prop.png">
+	<article class="accordion">
+		    <section id="acc1">
+		        <h2><a href="#acc1">Title One</a></h2>
+		        <p>This content appears on page 1.</p>
+		    </section>
+		    <section id="acc2">
+		        <h2><a href="#acc2">Title Two</a></h2>
+		        <p>This content appears on page 2.</p>
+		    </section>
+		    <section id="acc3">
+		        <h2><a href="#acc3">Title Three</a></h2>
+		        <p>This content appears on page 3.</p>
+		    </section>
+		    <section id="acc4">
+		        <h2><a href="#acc4">Title Four</a></h2>
+		        <p>This content appears on page 4.</p>
+		    </section>
+		    <section id="acc5">
+		        <h2><a href="#acc5">Title Five</a></h2>
+		        <p>This content appears on page 5.</p>
+		    </section>
+		</article>
+	
+	<div class="prop2">	
+		<img alt="간단한 소개" src="/static/images/prop.png" >
 	</div>
 	
 </main>
