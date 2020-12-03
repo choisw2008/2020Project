@@ -1,245 +1,191 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-
+<!DOCTYPE HTML>
+<!--
+	Paradigm Shift by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
 <html>
-<head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
- <script src='https://kit.fontawesome.com/a076d05399.js'></script>
- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-<style>
-@font-face {
-    font-family: 'Sucrose Bold Two';
-    src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/sucrose.woff2") format('woff2');
-    }
-@font-face {
-    font-family: 'IM Fell French Canon Pro';
-    src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/im-fell-french-canon-pro.woff2") format('woff2');
-   
-}
-* {
-  box-sizing: border-box;
-}
-body {
-  margin: 0;
-}
-header { 
-  background:url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/mountain-range.jpg") no-repeat ;
-  padding-top: 61.93333333%;
-  background-size: cover;
-  font-family: "PT Sans" sans-serif;
-}
-header img {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 45.8%; 
-}
-header h1 { 
-  position: fixed;
-  top: 2rem;
-  right: 2rem;
-  font-size: 8vw;
-  line-height: .8;
-  margin-top: 0;
-  text-align: center;
-}
-header h1 span {
-  display: block;
-  font-size: 7.00vw;
-}
-main { 
-  background: #fff;
-  position: relative;
-  border: 1px solid #fff;
-  font-family: 'IM Fell French Canon Pro';
-  font-size: 1.2rem;
-  padding: 2rem 0%;
-  line-height: 1.6;
-  text-align: center;
-  
-}
-main h2{
-	margin-top: 10%;
-	font-size: 50px;
-	text-align: center;
-}
-@media all and (max-width: 400px) {
-  main { padding: 2rem; }
-}
+	<head>
+		<title>Paradigm Shift by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<link rel="stylesheet" href="/static/assets/css/main.css" />
+	</head>
+	<body class="is-preload">
 
-.prop{
-  width:320px;
-  background-color: #3091ff;
-  position: relative;
-  animation-name: example;
-  border-radius:60px;
-  animation-duration: 4s;
-  margin-left: 40%;
-}
+		<!-- Wrapper -->
+			<div id="wrapper">
 
-@keyframes example {
-  0%   {top:0px;}
-  25%  {top:0px;}
-  50%  {top:px;}
-  75%  {top:30px;}
-  100% {top:0px;}
-}
-.prop2{
-	background-color:  #9966ff;
-	margin-top: 5%;
-}
-footer{ 
-	background-color: #9966ff;
-	text-align: center;
-	font-size: 20px;
-}
-footer p{
-	color: #fff;
-}
-/*메뉴 바*/
-article.accordion
-{
-    display: block;
-    width: 100%;
-    margin-left:1%;
-    background-color: #666;
-    overflow: auto;
-    border-radius: 5px;
-    box-shadow: 0 3px 3px rgba(0,0,0,0.3);
-    
-}
-article.accordion section
-{
-    position: relative;
-    display: block;
-    float: left;
-    width: 2em;
-    height: 12em;
-    margin: 0.5em 0 0.5em 0.5em;
-    color: #333;
-    background-color: #333;
-    overflow: hidden;
-    border-radius: 3px;
-}
-article.accordion section h2
-{
-    position: absolute;
-    font-size: 1em;
-    font-weight: bold;
-    text-align: center;
-    width: 12em;
-    height: 2em;
-    top: 12em;
-    left: 0;
-    text-indent: 1em;
-    padding: 0;
-    margin: 0;
-    color: #ddd;
-    -webkit-transform-origin: 0 0;
-    -moz-transform-origin: 0 0;
-    -ms-transform-origin: 0 0;
-    -o-transform-origin: 0 0;
-    transform-origin: 0 0;
-    -webkit-transform: rotate(-90deg);
-    -moz-transform: rotate(-90deg);
-    -ms-transform: rotate(-90deg);
-    -o-transform: rotate(-90deg);
-    transform: rotate(-90deg);
-}
-article.accordion section h2 a
-{
-    display: block;
-    width: 100%;
-    line-height: 2em;
-    text-decoration: none;
-    color: inherit;
-    outline: 0 none;
-}
-article.accordion section:target
-{
-    width: 86em;
-    padding: 0 1em;
-    color: #333;
-    background-color: #fff;
-}
-article.accordion section:target h2
-{
-    position: static;
-    font-size: 1.3em;
-    text-indent: 0;
-    color: #333;
-    -webkit-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    transform: rotate(0deg);
-}
+				<!-- Intro -->
+					<section class="intro">
+						<header>
+							<h1>Choi SuWon</h1>
+							<p>안녕하세요, 개발자를 옥표로 하는 최수원의 웹 포트폴리오입니다.<a href="https://github.com/choisw2008">@choisw2008</a></p>
+							<ul class="actions">
+								<li><a href="#first" class="arrow scrolly"><span class="label">Next</span></a></li>
+							</ul>
+						</header>
+						<div class="content" style="position: relative;">
+							<span class="image fill" data-position="center"><img src="/static/images/pic01.jpg" alt="" /></span>
+							<img alt="간단한 소개" src="" width="800px;" height="800px;" style="position: absolute;">
+						</div>
+					</section>
 
-article.accordion section,
-article.accordion section h2
-{
-    -webkit-transition: all 1s ease;
-    -moz-transition: all 1s ease;
-    -ms-transition: all 1s ease;
-    -o-transition: all 1s ease;
-    transition: all 1s ease;
-}
-</style>
-</head>
-<header>
-  <h1>웹 개발 <span><br>포 트</span><br> 폴리오</h1>\
-  <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/mountain-range-front.png">
-</header>
-<body>
-<main>
-	<h2>웹 개발자</h2>
-	<p>저는 코딩을 이용한 웹개발과 디자인을 좋아합니다. 그리고 제가 하는일에 책임감과 애정을 느끼고 있습니다.</p><br><br>
-	
-	<div class="prop">
-		<img class="Cinque Terre" src="" alt="프로필" width="300px;">
-	</div><br><br><br><br>
-	
-	<article class="accordion">
-		    <section id="acc1">
-		        <h2><a href="#acc1">Title One</a></h2>
-		        <p>This content appears on page 1.</p>
-		    </section>
-		    <section id="acc2">
-		        <h2><a href="#acc2">Title Two</a></h2>
-		        <p>This content appears on page 2.</p>
-		    </section>
-		    <section id="acc3">
-		        <h2><a href="#acc3">Title Three</a></h2>
-		        <p>This content appears on page 3.</p>
-		    </section>
-		    <section id="acc4">
-		        <h2><a href="#acc4">Title Four</a></h2>
-		        <p>This content appears on page 4.</p>
-		    </section>
-		    <section id="acc5">
-		        <h2><a href="#acc5">Title Five</a></h2>
-		        <p>This content appears on page 5.</p>
-		    </section>
-		</article>
-	
-	<div class="prop2">	
-		<img alt="간단한 소개" src="/static/images/prop.png" >
-	</div>
-	
-</main>
-<footer>
-	<br><i class="fab fa-500px" style="font-size:56px;color:black;"></i>
-	<p>항상 발전하고 성장해가자.</p>
-	<a href="https://github.com/choisw2008/AniMultiply"><i class="fab fa-github" style="font-size:48px;color:white;"></i></a>&nbsp&nbsp
-	<i class='fa fa-envelope' style="font-size:48px;color:white;"></i>&nbsp&nbsp
-	<a href="https://blog.naver.com/choisw2008"><i class='fa fa-blog' style='font-size:48px;color:white'></i></a>&nbsp&nbsp
-	<i class='fab fa-java' style="font-size:48px;color:white;"></i>
-</footer>
-</body>
+				<!-- Section -->
+					<section id="first">
+						<header>
+							<h2>Introduce</h2>
+						</header>
+						<div class="content">
+							<p><strong>Lorem ipsum dolor</strong> sit amet consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam tristique libero eu nibh porttitor amet fermentum. Nullam venenatis erat id vehicula ultrices sed ultricies condimentum. Magna sed etiam consequat, et lorem adipiscing sed nulla. Volutpat nisl et tempus et dolor libero, feugiat magna tempus, sed et lorem adipiscing.</p>
+							<span class="image main"><img src="/static/images/pic02.jpg" alt="" /></span>
+						</div>
+					</section>
+
+				<!-- Section -->
+					<section>
+						<header>
+							<h2>sKils</h2>
+						</header>
+						<div class="content">
+							<p><strong>Etiam tristique libero</strong> eu nibh porttitor amet fermentum. Nullam venenatis erat id vehicula ultrices sed ultricies condimentum.</p>
+							<ul class="feature-icons">
+								<li class="icon solid fa-laptop">Consequat tempus</li>
+								<li class="icon solid fa-bolt">Etiam adipiscing</li>
+								<li class="icon solid fa-signal">Libero nullam</li>
+								<li class="icon solid fa-cog">Blandit condimentum</li>
+								<li class="icon solid fa-map-marker-alt">Lorem ipsum dolor</li>
+								<li class="icon solid fa-code">Nibh amet venenatis</li>
+							</ul>
+							<p>Vehicula ultrices sed ultricies condimentum. Magna sed etiam consequat, et lorem adipiscing sed nulla. Volutpat nisl et tempus et dolor libero, feugiat magna tempus, sed et lorem adipiscing.</p>
+						</div>
+					</section>
+
+				<!-- Section -->
+					<section>
+						<header>
+							<h2>Portfolio project</h2>
+						</header>
+						<div class="content">
+							<p><strong>Integer mollis egestas</strong> nam maximus erat id euismod egestas. Pellentesque sapien ac quam. Lorem ipsum dolor sit nullam.</p>
+
+							<!-- Section -->
+								<section>
+									<header>
+										<h3>Erat aliquam</h3>
+										<p>Vehicula ultrices dolor amet ultricies et condimentum. Magna sed etiam consequat, et lorem adipiscing sed dolor sit amet, consectetur amet do eiusmod tempor incididunt  ipsum suspendisse ultrices gravida.</p>
+									</header>
+									<div class="content">
+										<div class="gallery">
+											<a href="images/gallery/fulls/01.jpg" class="landscape"><img src="/static/images/gallery/thumbs/01.jpg" alt="" /></a>
+											<a href="images/gallery/fulls/02.jpg"><img src="/static/images/gallery/thumbs/02.jpg" alt="" /></a>
+											<a href="images/gallery/fulls/03.jpg"><img src="/static/images/gallery/thumbs/03.jpg" alt="" /></a>
+											<a href="images/gallery/fulls/04.jpg" class="landscape"><img src="/static/images/gallery/thumbs/04.jpg" alt="" /></a>
+										</div>
+									</div>
+								</section>
+
+							<!-- Section -->
+								<section>
+									<header>
+										<h3>Nisl consequat</h3>
+										<p>Aenean ornare velit lacus, ac varius enim ullamcorper eu. Proin aliquam sed facilisis ante interdum congue. Integer mollis, nisl amet convallis, porttitor magna ullamcorper, amet mauris. Ut magna finibus nisi nec lacinia ipsum maximus.</p>
+									</header>
+									<div class="content">
+										<div class="gallery">
+											<a href="images/gallery/fulls/05.jpg" class="landscape"><img src="/static/images/gallery/thumbs/05.jpg" alt="" /></a>
+											<a href="images/gallery/fulls/06.jpg"><img src="/static/images/gallery/thumbs/06.jpg" alt="" /></a>
+											<a href="images/gallery/fulls/07.jpg"><img src="/static/images/gallery/thumbs/07.jpg" alt="" /></a>
+										</div>
+									</div>
+								</section>
+
+							<!-- Section -->
+								<section>
+									<header>
+										<h3>Lorem gravida</h3>
+										<p>Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aenean ornare velit lacus, ac varius sed enim lorem ullamcorper dolore.  ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis.</p>
+									</header>
+									<div class="content">
+										<div class="gallery">
+											<a href="images/gallery/fulls/08.jpg" class="portrait"><img src="/static/images/gallery/thumbs/08.jpg" alt="" /></a>
+											<a href="images/gallery/fulls/09.jpg" class="portrait"><img src="/static/images/gallery/thumbs/09.jpg" alt="" /></a>
+											<a href="images/gallery/fulls/10.jpg" class="landscape"><img src="/static/images/gallery/thumbs/10.jpg" alt="" /></a>
+										</div>
+									</div>
+								</section>
+
+						</div>
+					</section>
+
+				<!-- Section -->
+					<section>
+						<header>
+							<h2>Get in touch</h2>
+						</header>
+						<div class="content">
+							<p><strong>Auctor commodo</strong> interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis.</p>
+							<form>
+								<div class="fields">
+									<div class="field half">
+										<input type="text" name="name" id="name" placeholder="Name" />
+									</div>
+									<div class="field half">
+										<input type="email" name="email" id="email" placeholder="Email" />
+									</div>
+									<div class="field">
+										<textarea name="message" id="message" placeholder="Message" rows="7"></textarea>
+									</div>
+								</div>
+								<ul class="actions">
+									<li><input type="submit" value="Send Message" class="button primary" /></li>
+								</ul>
+							</form>
+						</div>
+						<footer>
+							<ul class="items">
+								<li>
+									<h3>Email</h3>
+									<a href="#">information@untitled.ext</a>
+								</li>
+								<li>
+									<h3>Phone</h3>
+									<a href="#">(000) 000-0000</a>
+								</li>
+								<li>
+									<h3>Address</h3>
+									<span>1234 Somewhere Road, Nashville, TN 00000</span>
+								</li>
+								<li>
+									<h3>Elsewhere</h3>
+									<ul class="icons">
+										<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+										<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+										<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+										<li><a href="#" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+										<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+										<li><a href="#" class="icon brands fa-codepen"><span class="label">Codepen</span></a></li>
+									</ul>
+								</li>
+							</ul>
+						</footer>
+					</section>
+
+				<!-- Copyright -->
+					<div class="copyright">&copy; Untitled. All rights reserved. Design: <a href="https://html5up.net">HTML5 UP</a>.</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="/static/assets/js/jquery.min.js"></script>
+			<script src="/static/assets/js/jquery.scrolly.min.js"></script>
+			<script src="/static/assets/js/browser.min.js"></script>
+			<script src="/static/assets/js/breakpoints.min.js"></script>
+			<script src="/static/assets/js/util.js"></script>
+			<script src="/static/assets/js/main.js"></script>
+
+	</body>
 </html>
