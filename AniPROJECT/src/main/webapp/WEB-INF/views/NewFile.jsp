@@ -1,10 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE HTML>
-<!--
-	Paradigm Shift by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
 	<head>
 		<title>Paradigm Shift by HTML5 UP</title>
@@ -13,6 +8,8 @@
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
 		<link rel="stylesheet" href="/static/assets/css/main.css" />
+		<link rel="apple-touch-icon" href="/static/images/icon/dog.ico" />
+		<link rel="icon" href="/static/images/icon/dog.ico" />
 	</head>
 	<body class="is-preload">
 
@@ -23,7 +20,8 @@
 					<section class="intro">
 						<header>
 							<h1>Choi SuWon</h1>
-							<p>안녕하세요, 개발자를 옥표로 하는 최수원의 웹 포트폴리오입니다.<a href="https://github.com/choisw2008">@choisw2008</a></p>
+							<p>최수원 - 崔洙源</p>
+							<p>안녕하세요, 웹 개발자를 목표로 하는 최수원의 웹 포트폴리오입니다.<a href="https://github.com/choisw2008">@choisw2008</a></p>
 							<ul class="actions">
 								<li><a href="#first" class="arrow scrolly"><span class="label">Next</span></a></li>
 							</ul>
@@ -38,9 +36,18 @@
 					<section id="first">
 						<header>
 							<h2>Introduce</h2>
+							<div class="elementor-text-editor elementor-clearfix">
+							<p class="ng-scope ng-binding"><strong class="global-color">NAME:</strong> 최수원<br/>
+							<strong class="global-color">RESIDENCE:</strong> 인천, 귤현동 장군봉길 50길<br />
+							<strong class="global-color">BIRTHDAY:</strong> 1998. 11. 06<br/>
+							<strong class="global-color">EMAIL:</strong> choisw2008@naver.com<br/></div>
+							<a href="/static/pdf/suwon.pdf" download><span style="font-size: 20px;">Download CV</span></a>
 						</header>
 						<div class="content">
-							<p><strong>Lorem ipsum dolor</strong> sit amet consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam tristique libero eu nibh porttitor amet fermentum. Nullam venenatis erat id vehicula ultrices sed ultricies condimentum. Magna sed etiam consequat, et lorem adipiscing sed nulla. Volutpat nisl et tempus et dolor libero, feugiat magna tempus, sed et lorem adipiscing.</p>
+							<p><strong>강한 책임감과 열정을 가지고 발전하는 웹 개발자입니다.</strong></p>
+							<p> 안녕하십니까 책임감과 열정을 가지고 지원하는 최수원입니다.
+								항상 부족한 점을 인식하고 발전하기 위해 노력하며 많은 것을 보고 배우고 고민하면서
+								웹 개발자로서의 전문성을 가지고 회사에서 필요로 하는 개발자로 성장하고 싶습니다.</p>
 							<span class="image main"><img src="/static/images/pic02.jpg" alt="" /></span>
 						</div>
 					</section>
@@ -51,17 +58,61 @@
 							<h2>sKils</h2>
 						</header>
 						<div class="content">
-							<p><strong>Etiam tristique libero</strong> eu nibh porttitor amet fermentum. Nullam venenatis erat id vehicula ultrices sed ultricies condimentum.</p>
-							<ul class="feature-icons">
-								<li class="icon solid fa-laptop">Consequat tempus</li>
-								<li class="icon solid fa-bolt">Etiam adipiscing</li>
-								<li class="icon solid fa-signal">Libero nullam</li>
-								<li class="icon solid fa-cog">Blandit condimentum</li>
-								<li class="icon solid fa-map-marker-alt">Lorem ipsum dolor</li>
-								<li class="icon solid fa-code">Nibh amet venenatis</li>
-							</ul>
-							<p>Vehicula ultrices sed ultricies condimentum. Magna sed etiam consequat, et lorem adipiscing sed nulla. Volutpat nisl et tempus et dolor libero, feugiat magna tempus, sed et lorem adipiscing.</p>
+							<p><strong style="font-size: 30px;">사용 가능 기술</strong></p>
+						<div class="row" align="center">
+							<div class="col-md-3 col-sm-6">
+					            <div class="service-item">
+					              <div class="icon">
+					                <img src="/static/images/icon/html.png" alt="html" width="100px;" height="100px;">
+					              </div>
+					              <h4>HTML - 80%</h4>
+					              <p><progress value="80" max="100" style="width: 100px;"></progress></p>
+					            </div>					            
+					          </div>
+					          
+					          <div class="col-md-3 col-sm-6">
+					            <div class="service-item">
+					              <div class="icon">
+					                <img src="/static/images/icon/css.png" alt="css" width="100px;" height="100px;">
+					              </div>
+					              <h4>CSS - 70%</h4>
+					             <p><progress value="70" max="100" style="width: 100px;"></progress></p>
+					            </div>
+					          </div>
+					          
+					          <div class="col-md-3 col-sm-6">
+					            <div class="service-item">
+					              <div class="icon">
+					                <img src="/static/images/icon/js.png" alt="JAVASCRIPT" width="100px;" height="100px;">
+					              </div>
+					              <h4>JAVA SCRIPT - 75%</h4>
+					              <p><progress value="75" max="100" style="width: 100px;"></progress></p>
+					            </div>
+					          </div> 
+					          
+					          <div class="col-md-3 col-sm-6">
+					            <div class="service-item">
+					              <div class="icon">
+					                <img src="/static/images/icon/git.png" alt="git" width="100px;" height="100px;">
+					              </div>
+					              <h4>Git Hub</h4>
+					              <p><progress value="50" max="100" style="width: 100px;"></progress></p>
+					            </div>
+					          </div>	
+					          
+					          <div class="col-md-3 col-sm-6">
+					           <h2> 주 개발 도구</h2>
+					            <div class="service-item">
+					              <div class="icon">
+					                <img src="/static/images/icon/spring.png" alt="spirng" width="100px;" height="100px;">
+					                <img src="/static/images/icon/eclipse.jpg" alt="eclipse" width="100px;" height="100px;">
+					                <p>해당 기술능력 향상에 대한 끊임없는 노력과 다양한 기술 습득을 위해 노력하고 발전하는 사원이 되겠습니다.</p>
+					              </div>				            
+					            </div>
+					          </div> 
+					          					          			      
 						</div>
+					</div>
 					</section>
 
 				<!-- Section -->
