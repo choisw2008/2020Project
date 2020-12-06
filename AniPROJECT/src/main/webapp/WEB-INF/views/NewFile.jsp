@@ -28,7 +28,7 @@
 						</header>
 						<div class="content" style="position: relative;">
 							<span class="image fill" data-position="center"><img src="/static/images/pic01.jpg" alt="" /></span>
-							<img alt="간단한 소개" src="" width="800px;" height="800px;" style="position: absolute;">
+							<img alt="간단한 소개" src="/static/images/prop.png" width="800px;" height="800px;" style="position: absolute;">
 						</div>
 					</section>
 
@@ -48,7 +48,14 @@
 							<p> 안녕하십니까 책임감과 열정을 가지고 지원하는 최수원입니다.
 								항상 부족한 점을 인식하고 발전하기 위해 노력하며 많은 것을 보고 배우고 고민하면서
 								웹 개발자로서의 전문성을 가지고 회사에서 필요로 하는 개발자로 성장하고 싶습니다.</p>
-							<span class="image main"><img src="/static/images/pic02.jpg" alt="" /></span>
+						<div class="col-md-3 col-sm-6">
+				           <div class="service-item">
+				             <div class="icon">
+				               <img src="/static/images/icon/good1.png" alt="html" width="100px;" height="100px;">
+				             </div>
+				             <h4>" 항상 그 자리에 안주하지 않고 끊임없는 노력과 발전을 해나가길 원하는 개발자를 꿈꾸는 자입니다. "</h4>
+				           </div>					            
+				        </div>
 						</div>
 					</section>
 
