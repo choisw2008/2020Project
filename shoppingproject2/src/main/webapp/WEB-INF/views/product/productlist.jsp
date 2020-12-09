@@ -82,7 +82,7 @@
 							</div>
 						</div>
 					</div>
-
+						
 					<!-- Left and right controls -->
 					<a class="left carousel-control" href="#myCarousel" role="button"
 						data-slide="prev"> <span
@@ -114,7 +114,15 @@
 			</div>
 		</div>
 	</div>
-
+		
+		<!-- 검색창 -->
+				<div class="container">
+					<form class="form-inline" action="/product/searchList" method="post">
+						<input type="text" class="form-control" id="searchBox" name="searchName" size="100"
+							   placeholder="검색어를 입력하세요">
+						<button type="submit">검색</button>
+					</form>
+				</div>
 
 		<div id="paginationBox" >
 			<ul class="pagination">
